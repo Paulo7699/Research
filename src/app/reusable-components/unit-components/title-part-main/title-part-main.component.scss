@@ -1,0 +1,38 @@
+@import "../../../../variables.scss";
+
+.title-part {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+}
+
+.add-point::after {
+    content: '.';
+    font-weight: bold;
+}
+
+.title-right, .title-left {
+    font-size: $font-size-title-part-l-screen;
+}
+
+.title-left {
+    font-weight: $weight-logo-part-l-screen;
+}
+
+.square-color {
+    height: 30%;
+    width: 15px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+span + span {
+    margin-left: 2px;
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    .title-right, .title-left {
+        font-size: $font-size-title-part-m-screen;
+    }
+}

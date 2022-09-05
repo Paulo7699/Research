@@ -1,0 +1,7 @@
+<app-splash-screen [animationType]="'fade-out'" [duration]="0.5" [animationDuration]="0.125"></app-splash-screen>
+<app-back urlBack="/partners"></app-back>
+<app-top-details-bar title="Partner {{idPartner}}" urlBack="/partners"></app-top-details-bar>
+<main class="details">
+    <app-main-detail-associated-products title="Partner {{idPartner}}" idPartner="{{idPartner}}"></app-main-detail-associated-products>
+</main>
+<app-errors></app-errors>

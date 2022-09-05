@@ -1,0 +1,29 @@
+@import "../../../../variables.scss";
+
+:host {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-cards {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: var(--cards-color);
+    position: relative;
+    width: 50%;
+}
+
+.selected-cards span:not(.select-admin span) {
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    :host {
+        height: 100%;
+        align-items: initial;
+        margin-top: 30px;
+    }
+}

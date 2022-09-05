@@ -1,0 +1,69 @@
+@import "../../../../variables.scss";
+
+.error {
+    position: fixed;
+    bottom: -250px;
+    right: 50px;
+    background-color: var(--max-reached);
+    color: var(--text-max-reached);
+    height: 200px;
+    width: 280px;
+
+    // border: 2px solid var(--text-max-reached);
+    box-shadow: 2px 2px 2px var(--text-max-reached);
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-rows: 2fr 5fr;
+
+    transition: all 0.5s ease;
+}
+
+.close {
+    position: absolute;
+    top:5px;
+    right: 5px;
+
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--text-max-reached);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-error-part {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.title-error-part, .message-error-part {
+    padding-left: 10px;
+}
+
+.displayed-error {
+    bottom: 50px;
+}
+
+.message-error-part {
+    font-size: $font-size-error-l-screen;
+}
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    .message-error-part {
+        font-size: $font-size-error-m-screen;
+    }
+
+    .error {
+        box-shadow: 1px 1px 1px var(--text-max-reached);
+        height: 150px;
+        width: 210px;
+    }
+
+    .displayed-error {
+        bottom: 150px;
+    }
+}

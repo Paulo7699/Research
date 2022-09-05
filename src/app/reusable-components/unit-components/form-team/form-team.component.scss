@@ -1,0 +1,75 @@
+@import "../../../../variables.scss";
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-form {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.group-text-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-field, .button-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 20px;
+}
+
+.button-field * {
+    border: transparent;
+}
+
+.text-field * {
+    padding-left: 10px;
+    background-color: var(--button-color);
+    border: 2px solid var(--button-color);
+}
+
+.text-field *, .button-field * {
+    width: 60%;
+    // height: 40%;
+    border-radius: 25px;
+    font-size: $font-size-title-part-l-screen;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: $breakpoint-vl-screen) {
+    .group-text-fields .text-field *{
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    .card-form {
+        width: 80%;
+    }
+
+    .group-text-fields {
+        grid-template-columns: 1fr;
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    .text-field * {
+        font-size: 8px;
+    }
+
+
+    .button-field * {
+        font-size: 12px;
+    }.card-form {
+        width: 80%;
+    }
+}

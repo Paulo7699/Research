@@ -1,0 +1,27 @@
+@import "../../../../variables.scss";
+
+.specificiation {
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 80%;
+}
+
+.first-info-card-specification {
+    height: 200px;
+}
+
+@media screen and (max-width: $breakpoint-m-screen){
+    .specificiation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .block-specification {
+        padding: 0!important;
+    }
+}

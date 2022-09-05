@@ -1,0 +1,19 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content block-specification">
+    <app-title-part-main titleRight="Specifications of " titleLeft="{{idCaracteristique}}" color="#FFBC99"></app-title-part-main>
+
+    <div class="specificiation">
+        <div class="field-specification" *ngFor="let field of fields; let index=index">
+            <div class="first-info-card-specification">
+                <app-cards-specification title={{field}} quantity={{specifications[field]}} codeSpecification="{{index}}"></app-cards-specification>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="valid-changes">
+    <div class="changes-button">
+        <button [ngStyle]="{'background-color': 'rgb(255, 188, 153)'}" class="items-second-row pointer">Confirm changes</button>
+        <button [ngStyle]="{'background-color': 'rgb(255, 188, 153)'}" class="items-second-row pointer">Remove changes</button>
+    </div>
+</div>

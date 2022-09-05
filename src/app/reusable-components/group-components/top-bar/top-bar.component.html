@@ -1,0 +1,14 @@
+<section class="top-section-bar">
+    <div class="top-section-title">
+        <span class="main-title" (click)="testError()">{{title}}.</span>
+        <div class="sub-title">
+            <fa-icon class="fa-bars pointer" [icon]="faBars" (click)="changeValue()"></fa-icon>
+            <app-toggle-dark-light class="m-screen-toggle" *ngIf="innerWidth <= 992"></app-toggle-dark-light>
+            <app-logout *ngIf="innerWidth <= 992"></app-logout>
+        </div>
+    </div>
+    <div class="right-section-bar">
+        <app-welcome-user></app-welcome-user>
+        <!-- <app-toggle-dark-light class="l-screen-toggle"></app-toggle-dark-light> -->
+    </div>
+</section>

@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+//variables
+
+$weight-normal : 200;
+
+$font-family : 'Montserrat';
+
+$size-logo : 90px;
+
+$width-l-screen : 280px;
+$width-l-screen-border : 282px;
+
+//sizes, heights and weights
+    //l-screen
+
+$font-size-logo-icon-l-screen:50px;
+$font-size-icon-l-screen:18px;
+$weight-title-part-l-screen : thin; //statistics of ...
+$weight-logo-part-l-screen : bold;
+$weight-is-selected-l-screen : 900; 
+$font-size-title-part-l-screen : 18px;
+$font-size-toggle-icon-part-l-screen : 16px;
+$font-size-error-l-screen : 16px;
+$font-size-table-l-screen : 16px;
+$width-toggle-l-screen : 50px;
+$translate-toggle-l-screen:24px;
+$height-toggle-l-screen : 26px;
+$size-toggle-ball-l-screen : 22px;
+$font-size-logo-part-l-screen : 35px;
+$font-size-title-top-l-screen : 45px;
+$weight-title-l-screen : 200; //...Nutriset && Mathilde
+
+    //m-screen
+$weight-title-part-m-screen : thin; //statistics of ...
+$weight-logo-part-m-screen : bold; //statistics of ...
+$font-size-title-part-m-screen : 14px;
+$font-size-toggle-icon-part-m-screen : 12px;
+$font-size-error-m-screen : 12px;
+$font-size-table-m-screen : 12px;
+$width-toggle-m-screen : 30px;
+$translate-toggle-m-screen:14px;
+$height-toggle-m-screen : 19px;
+$size-toggle-ball-m-screen : 14px;
+$font-size-logo-part-m-screen : 28px;
+$font-size-title-top-m-screen : 32px;
+$weight-title-m-screen : 160; //...Nutriset && Mathilde
+
+//breakpoints
+$breakpoint-vl-screen:1400px;
+$breakpoint-l-screen:992px;
+$breakpoint-m-screen:600px;
+$breakpoint-s-screen:380px;

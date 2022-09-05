@@ -1,0 +1,11 @@
+<section class="top-section-bar">
+    <div class="top-section-title">
+        <div class="back-icon">
+            <fa-icon class="faClose pointer" [icon]="faBack" (click)="navigateBack()"></fa-icon>
+        </div>
+        <span class="main-title" (click)="testError()">{{title}}.</span>
+    </div>
+    <div class="right-section-bar">
+        <app-welcome-user></app-welcome-user>
+    </div>
+</section>

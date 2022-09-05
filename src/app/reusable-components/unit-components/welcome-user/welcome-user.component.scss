@@ -1,0 +1,34 @@
+@import "../../../../variables.scss";
+
+:host {
+    width: 100%;
+}
+
+#p-welcome, #user-name {
+    display: flex;
+    // justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+#p-welcome {
+    font-weight: $weight-title-part-l-screen;
+    font-size: $font-size-title-part-l-screen;
+}
+
+#user-name {
+    font-weight: $weight-logo-part-l-screen;
+    font-size: $font-size-logo-part-l-screen;
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    #p-welcome {
+        font-weight: $weight-title-part-m-screen;
+        font-size: $font-size-title-part-m-screen;
+    }
+
+    #user-name {
+        font-weight: $weight-logo-part-m-screen;
+        font-size: $font-size-logo-part-m-screen;
+    }
+}

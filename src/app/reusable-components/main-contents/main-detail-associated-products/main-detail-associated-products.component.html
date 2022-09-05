@@ -1,0 +1,24 @@
+<span class="title-small-screens">{{title}}.</span>
+<div class="global-content">
+    <div class="block-content">
+        <app-title-part-main titleRight="Products by " titleLeft="Nutriset" color="#FFBC99"></app-title-part-main>
+
+        <div class="first-info-card">
+            <app-cards-selectable *ngFor="let prod of products" title={{prod.title}} type={{prod.type}} id="{{prod.id}}" code="{{prod.code}}" color="{{prod.color}}" (click)="associateProduct(prod.id)"></app-cards-selectable>
+        </div>
+    </div>
+
+    <div class="block-content">
+        <app-title-part-main titleRight="Products partner can do" color="#FFBC99"></app-title-part-main>
+
+        <div class="first-info-card">
+            <app-cards-selectable *ngFor="let prod of productsPartnerCanDo" title={{prod.title}} type={{prod.type}} id="{{prod.id}}" code="{{prod.code}}" color="{{prod.color}}" (click)="removeAssociation(prod.id)"></app-cards-selectable>
+        </div>
+    </div>
+</div>
+<div class="valid-changes">
+    <div class="changes-button">
+        <button [ngStyle]="{'background-color': 'rgb(255, 188, 153)'}" class="items-second-row pointer">Confirm changes</button>
+        <button [ngStyle]="{'background-color': 'rgb(255, 188, 153)'}" class="items-second-row pointer">Remove changes</button>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+@import "../../../../variables.scss";
+
+.action-buttons {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.action-buttons div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-buttons button {
+    width: 60%;
+    border-radius: 20px;
+    font-size: $font-size-title-part-l-screen;
+    color: var(--text-color);
+}
+
+.button-details {
+    // background-color: var(--ambiant);
+    // border: 1px solid var(--ambiant);
+    border: transparent;
+}
+
+.button-delete {
+    background-color: var(--selected);
+    // border: 1px solid var(--selected);
+    border: transparent;
+}
+
+.button-name {
+    background-color: #B1E5FC;
+    // border: 1px solid var(--name);
+    border: transparent;
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    // .action-buttons {
+    //     grid-template-columns: repeat(3,1fr);
+    // }
+
+    .action-buttons button {
+        font-size: 10px;
+    }
+}

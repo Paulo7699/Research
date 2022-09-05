@@ -1,0 +1,21 @@
+<div class="number-cards shadow" [ngClass]="isHigherOrEqualsLimit() ? 'border-limits':''">
+    <div class="left-part">
+        <div class="circle-icon" [ngStyle]="{'background-color': color}">
+            <fa-icon [icon]="arrayIcons[code]"></fa-icon>
+        </div>
+    </div>
+    <div class="right-part">
+        <div class="title-part">
+            <span class="span-title-part">{{title}}</span>
+        </div>
+        <div class="quantity-part">
+            <span>{{quantity}}</span>
+        </div>
+    </div>
+
+    <div class="max-reached shadow" *ngIf="isHigherOrEqualsLimit()">
+        <span>max</span>
+    </div>
+</div>
+
+

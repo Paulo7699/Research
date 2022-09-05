@@ -1,0 +1,49 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Available products" color="#FFBC99"></app-title-part-main>
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let prod of products" title={{prod.title}} type={{prod.type}} id="{{prod.id}}" code="{{prod.code}}" color="{{prod.color}}"></app-cards-selectable>
+    </div>
+</div>
+
+<div class="block-content" *ngIf="productSelected()">
+    <app-title-part-main titleRight="Caracteristics fields" color="#FFBC99"></app-title-part-main>
+
+    <div class="caracteristics-field">
+        <div class="caracteristics-field-row" id="title-caracteristic-row">
+            <span *ngFor="let col of colums">{{col.name}}</span>
+        </div>
+        <div class="caracteristics-field-row" *ngFor="let caracteristic of caracteristics">
+            <label>{{caracteristic.title}}</label>
+            <label>mg</label>
+            <div class="center-div">
+                <div class="input-div">
+                    <select name="selectLaboratoires" id="selectLaboratoires">
+                        <option selected="selected" value="">Other lab</option>
+                        <option *ngFor="let l of laboratories">{{l.title}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="center-div"><div class="input-div"><input type="text" name="" id="" value="" placeholder="Lab name"></div></div>
+            <div class="center-div"><div class="input-div"><input type="text" name="" id="" value="" placeholder="Incertitude (%)"></div></div>
+            <div class="center-div"><div class="input-div"><input type="text" name="" id="" value="" placeholder="Value"></div></div>
+        </div>
+    </div>
+</div>
+
+<div class="block-content" *ngIf="productSelected()">
+    <app-title-part-main titleRight="Additional fields" color="#FFBC99"></app-title-part-main>
+
+    <div class="additional-fields">
+        <div class="additional-fields-row" *ngFor="let additionalField of additionalFields">
+            <label>{{additionalField.title}}</label>
+            <div class="input-div"><input type="text" name="" id="" value="" placeholder="Value"></div>
+        </div>
+    </div>
+</div>
+
+<div class="buttons" *ngIf="productSelected()">
+    <button>Save</button>
+    <button>Publish</button>
+</div>

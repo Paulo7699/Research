@@ -1,0 +1,44 @@
+@import "../../../../variables.scss";
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  border: transparent;
+  padding: 20px;
+  // height: 40%;
+  border-radius: 25px;
+  font-size: $font-size-title-part-l-screen;
+  color: var(--text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#remove {
+  background-color: rgba(237, 33, 58,0.5);
+}
+
+#remove:focus {
+  border:2px solid #93291E;
+}
+
+#confirm {
+  background-color: #B1E5FC;
+}
+
+#confirm:focus {
+  border:2px solid blue;
+}
+
+
+@media screen and (max-width: $breakpoint-m-screen) {
+  button {
+      font-size: $font-size-title-part-m-screen;
+  }
+}

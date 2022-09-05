@@ -1,0 +1,21 @@
+<nav class="left-nav-bar">
+    <app-logo></app-logo>
+    <div class="separation-panels-toggle">
+        <div class="slide-menu">
+            <div class="panels" *ngFor="let panel of arrayPanel; let index = index">
+                    <app-title-panels title={{panel.title}} urlInput={{panel.url}} icon={{panel.icon}} [isSelected]="index==selectedIndex"></app-title-panels>
+            </div>
+        </div>
+        <span id="span-actions">
+            <app-toggle-dark-light class="l-screen-toggle"></app-toggle-dark-light>
+            <app-logout></app-logout>
+        </span>
+    </div>
+</nav>
+
+<div class="mobile-left-nav-bar" [ngClass]="isItClicked() ? 'mobile-menu' : ''">
+    <div class="mobile-panels" *ngFor="let panel of arrayPanel; let index = index">
+        <app-title-panels title={{panel.title}} urlInput={{panel.url}} icon={{panel.icon}} [isSelected]="index==selectedIndex"></app-title-panels>
+    </div>
+    <fa-icon class="faClose pointer" [icon]="faClose" (click)="closeHamburgerMenu()"></fa-icon>
+</div>

@@ -1,0 +1,36 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Products by " titleLeft="Nutriset" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let prod of products" title={{prod.title}} type={{prod.type}} id="{{prod.id}}" code="{{prod.code}}" color="{{prod.color}}"></app-cards-selectable>
+        <!-- color="{{prod.color}}" -->
+    </div>
+</div>
+
+<div class="second-area">
+    <div class="left-part">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Add a product"  color="#B1E5FC"></app-title-part-main>
+            <app-form-products color="#B1E5FC" placeholder="Product name"></app-form-products>
+        </div>
+    </div>
+    <div class="right-part" [ngClass]="getSelectedColor()?'':'unauthorized-part'">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Make some changes" type="1" color="#f1f1f1"></app-title-part-main>
+            <app-action-selected color="#f1f1f1" type="1"></app-action-selected>
+            <div *ngIf="!getSelectedColor()" class="select-warning shadow">
+                <span>select a product</span>
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+<!-- <div class="seconde-info-card">
+    <app-form-products></app-form-products>
+    <div class="block-content">
+        <app-action-selected></app-action-selected>
+    </div> 
+</div>-->

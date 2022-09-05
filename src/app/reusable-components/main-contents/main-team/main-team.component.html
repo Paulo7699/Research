@@ -1,0 +1,27 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Members of " titleLeft="Nutriset" color="#FFBC99"></app-title-part-main>
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let member of team" title={{member.name}} type={{member.type}} id="{{member.id}}" code="{{member.code}}" color="{{member.color}}" [isAdmin]=member.isAdmin></app-cards-selectable>
+    </div>
+</div>
+
+<div class="second-area">
+    <div class="left-part">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Add a member"  color="#B1E5FC"></app-title-part-main>
+            <app-form-team color="#B1E5FC"></app-form-team>
+        </div>
+    </div>
+    <div class="right-part" [ngClass]="getSelectedColor()?'':'unauthorized-part'">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Make some changes" type="4" color="#f1f1f1"></app-title-part-main>
+            <app-action-team-selected color="#f1f1f1" type="4"></app-action-team-selected>
+            <div *ngIf="!getSelectedColor()" class="select-warning shadow">
+                <span>select a member</span>
+            </div>
+        </div> 
+    </div>
+</div>
+

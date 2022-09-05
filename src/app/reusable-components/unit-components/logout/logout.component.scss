@@ -1,0 +1,17 @@
+@import "../../../../variables.scss";
+
+:host{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logout {
+    font-size: x-large;
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    .logout {
+        font-size: small;
+    }
+}

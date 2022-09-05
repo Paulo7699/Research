@@ -1,0 +1,6 @@
+<div class="title-part">
+    <div class="square-color" [ngStyle]="getSelectedColor() ? {'background-color':getSelectedColor()} : {'background-color':color}">        
+    </div>
+    <span class="title-right" [ngClass]="titleLeft?'':'add-point'">{{titleRight}}</span>
+    <span class="title-left" [ngClass]="titleLeft?'add-point':''">{{titleLeft}}</span>
+</div>

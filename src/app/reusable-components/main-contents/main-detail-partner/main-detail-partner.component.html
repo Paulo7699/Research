@@ -1,0 +1,28 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Partner accounts of " titleLeft="{{idPartner}}" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let account of accounts" title={{account.name}} type={{account.type}} id="{{account.id}}" code="{{account.code}}" color="{{account.color}}"></app-cards-selectable>
+        <!-- color="{{account.color}}" -->
+    </div>
+</div>
+
+<div class="second-area">
+    <div class="left-part">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Add an account"  color="#B1E5FC"></app-title-part-main>
+            <app-form-account-partner color="#B1E5FC" placeholder="Carac name"></app-form-account-partner>
+        </div>
+    </div>
+    <div class="right-part" [ngClass]="getSelectedColor()?'':'unauthorized-part'">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Make some changes" type="6" color="#f1f1f1"></app-title-part-main>
+            <app-action-selected color="#f1f1f1" type="6"></app-action-selected>
+            <div *ngIf="!getSelectedColor()" class="select-warning shadow">
+                <span>select an account</span>
+            </div>
+        </div> 
+    </div>
+</div>

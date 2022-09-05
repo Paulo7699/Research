@@ -1,0 +1,13 @@
+<table class="table-product">
+    <th *ngFor="let t of titlesTh; let index=index" [ngClass]="selectedFilter==index?'':'unselected-filter'">
+        <div class="title-filter pointer" (click)="sortArray(index)">
+            <span>{{t.title}}</span>
+            <fa-icon [ngClass]="selectedFilter==index?'':'icon-hidden'" [icon]="titlesTh[index].increasing?faArrowAltCircleDown:faArrowAltCircleUp"></fa-icon>
+        </div>
+    </th>
+
+    <tr *ngFor="let data of dataTable">
+        <td><span id="date">{{data.date}}</span></td>
+        <td><span id="product">{{data.product}}</span></td>
+    </tr>
+</table>

@@ -1,0 +1,20 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="global-display">
+    <div class="block-content" *ngFor="let prod of productsAndCaracAndIncertitude">
+        <app-title-part-main titleRight="Incertitudes (%) for " titleLeft="{{prod.title}}" color="{{prod.color}}"></app-title-part-main>
+        <div class="row-carac-incertitude" *ngFor="let c of prod.caracteristiques">
+            <span>{{c.nameCarac}}</span>
+            <div class="incertitude">
+                <input type="text" name="" id="" value={{c.incertitude}}/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="valid-changes">
+    <div class="changes-button">
+        <button [ngStyle]="{'background-color': 'rgb(255, 188, 153)'}" class="items-second-row pointer">Confirm changes</button>
+        <button [ngStyle]="{'background-color': 'rgb(255, 188, 153)'}" class="items-second-row pointer">Remove changes</button>
+    </div>
+</div>

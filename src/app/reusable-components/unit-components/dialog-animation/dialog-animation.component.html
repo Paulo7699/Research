@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Delete file</h1>
+<div mat-dialog-content>
+  Would you like to delete {{itemToDelete}} ?
+</div>
+<div mat-dialog-actions>
+  <div class="buttons">
+    <button class="items-second-row" (click)="onDelete()" id="remove" cdkFocusInitial>No</button>
+    <button class="items-second-row" (click)="onCommand()" id="confirm">Confirm</button>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+@import "../../../../variables.scss";
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+
+.isSelected {
+    background-color: var(--color-nav-bar-items);
+    font-weight: $weight-is-selected-l-screen;
+}
+
+:not(.isSelected).panel:hover {
+    background-color: var(--hover-color)
+}
+
+.panel-icon {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: $font-size-icon-l-screen;
+}
+
+.panel-name {
+    // width: 75%;
+    font-weight: $weight-title-part-l-screen;
+    font-size: 12px;
+}
+
+.isNotSelected {
+    color : var(--text-color-unselected);
+}
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    .panel-icon {
+        display: none;
+    }
+
+    .panel, .panel-name {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .isSelected {
+        background-color: transparent;
+        font-weight: $weight-is-selected-l-screen;
+    }
+}

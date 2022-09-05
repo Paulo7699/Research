@@ -1,0 +1,12 @@
+<div class="error" [ngClass]="isShown()?'displayed-error':''">
+    <div class="close pointer" (click)="changeValue()">
+        <fa-icon class="faClose" [icon]="faClose"></fa-icon>
+    </div>
+
+    <div class="title-error-part">
+        {{ getErrorTitle() }}
+    </div>
+    <div class="message-error-part">
+        {{ getErrorMessage() }}
+    </div>
+</div>

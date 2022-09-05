@@ -1,0 +1,19 @@
+@import "../../../../variables.scss";
+
+.back-part {
+    position: absolute;
+    height: 100px;
+    background-color: var(--color-nav-bar);
+    width: 280px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    align-items: center;
+    font-size: x-large;
+}
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    .back-part {
+        display: none;
+    }
+}

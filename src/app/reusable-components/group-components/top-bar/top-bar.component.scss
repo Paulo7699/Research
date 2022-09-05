@@ -1,0 +1,94 @@
+@import "../../../../variables.scss";
+
+.top-section-bar {
+    position: relative;
+    top: 0;
+    left: $width-l-screen;
+    height: 100%;
+    width: calc(100% - $width-l-screen-border);
+    background-color: var(--color-nav-bar);//$nav-bar-color;
+    height: 100px;
+    display: flex;
+}
+
+.top-section-title {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+
+    font-weight: $weight-logo-part-l-screen;
+    font-size: $font-size-title-top-l-screen;
+}
+
+.right-section-bar {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sub-title {
+    display: none;
+    width: 100%;
+}
+
+.sub-title *{
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    .top-section-bar  {
+        width: 100%;
+        left: 0;
+        padding-bottom: 20px;
+    }
+    .top-section-title {
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .right-section-bar {
+        width: 50%;
+    }
+    .sub-title {
+        display: flex;
+    }
+
+    .l-screen-toggle {
+        display: none;
+    }
+
+    .main-title {
+        display: none;
+    }
+
+    .top-section-title {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sub-title *{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    .sub-title *{
+        margin-right: 10px;
+    }
+
+    .top-section-bar  {
+        width: 100%;
+        left: 0;
+        padding-bottom: 0px;
+    }
+
+    .top-section-title {
+        font-weight: $weight-logo-part-m-screen;
+        font-size: $font-size-title-top-m-screen;
+    }
+}

@@ -1,0 +1,85 @@
+@import "../../../../variables.scss";
+
+:host {
+    height: 100%;
+    // background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.number-cards {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    min-width: 70%;
+    position: relative;
+}
+
+.left-part, .right-part {
+    height: 100%;
+}
+
+.right-part {
+    display: grid;
+    grid-template-rows: 5fr 8fr;
+}
+
+.left-part {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-part, .title-part {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-part *{
+    font-weight: $weight-logo-part-l-screen;
+    font-size: $font-size-title-top-l-screen;
+    width: 100px;
+    border: transparent;
+    background-color: var(--background-color);
+}
+
+.title-part{
+    font-size: $font-size-title-part-l-screen;
+    color:var(--text-color-unselected)
+}
+
+@media screen and (max-width: $breakpoint-l-screen){
+    .number-cards {
+        min-width: 70%;
+    }
+    
+}
+
+
+@media screen and (max-width: $breakpoint-m-screen){
+    .quantity-part *{
+        font-size: $font-size-title-top-m-screen;
+    }
+    .title-part{
+        font-size: $font-size-title-part-m-screen;
+    }
+
+    .right-part {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-m-screen){
+    .left-part {
+        align-items: flex-end;
+        margin-bottom: 20px;
+    }
+
+    .title-part {
+        margin-left: -60px;
+    }
+
+    .number-cards {
+        width: 50%;
+    }
+}

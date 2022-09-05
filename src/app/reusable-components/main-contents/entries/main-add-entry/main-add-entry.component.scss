@@ -1,0 +1,153 @@
+@import "../../../../../variables.scss";
+
+.buttons {
+    margin-left: 25px;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+button {
+    border: transparent;
+    padding: 20px;
+    // height: 40%;
+    border-radius: 25px;
+    font-size: $font-size-title-part-l-screen;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B1E5FC;
+    min-width: 10%;
+    margin-right: 25px;
+}
+
+
+.caracteristics-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.caracteristics-field-row label, .caracteristics-field-row input, .caracteristics-field-row select {
+    font-size: large;
+}
+
+.caracteristics-field-row label {
+    display: flex;
+    justify-content:center;// flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.caracteristics-field-row input {
+    display: flex;
+    justify-content:center;// flex-start;
+    width: 60%;
+}
+
+.input-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-caracteristic-row span{
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.additional-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.additional-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.additional-fields-row label {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 10px;
+    font-size: large;
+}
+
+.additional-fields-row input {
+    display: flex;
+    justify-content:flex-start;
+    width: 60%;
+    font-size: large;
+}
+
+@media screen and (max-width: $breakpoint-l-screen) {
+    button {
+        font-size: $font-size-title-part-l-screen;
+    }
+
+    .buttons {
+        padding-bottom: 50px;
+    }
+
+    .caracteristics-field-row {
+        grid-template-columns: 1fr 1fr;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 25px;
+        border: 2px solid var(--background-color);
+    }
+
+    .input-div {
+        width: 80%;
+    }
+
+    .caracteristics-field-row label, .caracteristics-field-row input, .caracteristics-field-row select {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .caracteristics-field-row label:first-child {
+        font-weight: bold;
+    }
+
+    #title-caracteristic-row {
+        display: none;
+    }
+
+    .additional-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: $breakpoint-m-screen) {
+    button {
+        font-size: $font-size-title-part-m-screen;
+        min-width: 22%;
+        padding: 10px;
+    }
+
+    .caracteristics-field-row label, .caracteristics-field-row input, .caracteristics-field-row select {
+        font-size: smaller;
+    }
+
+    .caracteristics-field-row label:first-child {
+        font-size: large;
+    }
+
+    .additional-fields-row input, .additional-fields-row label {
+        font-size: small;
+    }
+}

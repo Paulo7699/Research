@@ -1,0 +1,10 @@
+<div class="selected-cards pointer shadow" (click)="selectItem()" [ngStyle]="{'border': isSelected() ? '2px solid '+color+'' : ''}">
+    <div class="circle-icon" [ngStyle]="{'background-color': color}">
+        <fa-icon [icon]="arrayIcons[code]"></fa-icon>
+    </div>
+    <span>{{title}}</span>
+
+    <div *ngIf="isAdmin" class="select-admin shadow">
+        <span>admin</span>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="panel" [ngClass]="isSelected?'isSelected':'pointer isNotSelected'" routerLink="{{urlInput}}">
+    <div class="panel-icon">
+        <fa-icon class="fa-icon" [icon]="arrayIcons[icon]"></fa-icon>
+    </div>
+    <div class="panel-name">
+        <span [ngClass]="isSelected?'':'isNotSelected'">{{title}}</span>
+    </div>
+</div>

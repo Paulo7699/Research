@@ -1,0 +1,28 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Caracteristics of " titleLeft="{{idProduct}}" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let carac of caracteristics" title={{carac.title}} type={{carac.type}} id="{{carac.id}}" code="{{carac.code}}" color="{{carac.color}}"></app-cards-selectable>
+        <!-- color="{{carac.color}}" -->
+    </div>
+</div>
+
+<div class="second-area">
+    <div class="left-part">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Add a caracteristic"  color="#B1E5FC"></app-title-part-main>
+            <app-form-products color="#B1E5FC" placeholder="Carac name"></app-form-products>
+        </div>
+    </div>
+    <div class="right-part" [ngClass]="getSelectedColor()?'':'unauthorized-part'">
+        <div class="block-content content-second-row">
+            <app-title-part-main app-title-part-main titleRight="Make some changes" type="5" color="#f1f1f1"></app-title-part-main>
+            <app-action-detail-product-selected color="#f1f1f1" type="5"></app-action-detail-product-selected>
+            <div *ngIf="!getSelectedColor()" class="select-warning shadow">
+                <span>select a caracteristic</span>
+            </div>
+        </div> 
+    </div>
+</div>

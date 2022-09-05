@@ -1,0 +1,8 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Available options" color="#FFBC99"></app-title-part-main>
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let option of options; let index=index" title={{option.title}} [isEntry]="true" entryType="{{index}}" color={{option.color}} code=9></app-cards-selectable>
+    </div>
+</div>

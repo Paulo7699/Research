@@ -1,0 +1,14 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Statistics of " titleLeft="Nutriset" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-number-cards *ngFor="let iq of itemsQuantity" title={{iq.title}} quantity={{iq.quantity}} code="{{iq.code}}" color="{{iq.color}}"></app-number-cards>
+    </div>
+</div>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Recent analyses" color="#B1E5FC"></app-title-part-main>
+    <app-table-analysis></app-table-analysis>
+</div>

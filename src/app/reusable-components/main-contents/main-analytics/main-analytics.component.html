@@ -1,0 +1,29 @@
+<span class="title-small-screens">{{title}}.</span>
+
+<div class="block-content">
+    <app-title-part-main titleRight="Products to monitor" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let prod of products" title={{prod.title}} type={{prod.type}} id="{{prod.id}}" code="{{prod.code}}" color="{{prod.color}}"></app-cards-selectable>
+        <!-- color="{{prod.color}}" -->
+    </div>
+</div>
+
+<div class="block-content" *ngIf="isSelected(0)">
+    <app-title-part-main titleRight="Caracteristic to monitor" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-cards-selectable *ngFor="let carac of caracteristics" title={{carac.title}} type={{carac.type}} id="{{carac.id}}" code="{{carac.code}}" color="{{carac.color}}"></app-cards-selectable>
+        <!-- color="{{carac.color}}" -->
+    </div>
+</div>
+
+<div class="block-content" *ngIf="isSelected(1) && !partnerAsking">
+    <app-title-part-main titleRight="Partner to monitor" color="#FFBC99"></app-title-part-main>
+
+    <div class="first-info-card">
+        <app-cards-monitor-partner *ngFor="let partner of partners" title={{partner.title}} id="{{partner.id}}" color="{{partner.color}}"></app-cards-monitor-partner>
+    </div>
+</div>
+
+<app-chart-monitor *ngIf="isSelected(2)" [partnerAsking]="partnerAsking"></app-chart-monitor>

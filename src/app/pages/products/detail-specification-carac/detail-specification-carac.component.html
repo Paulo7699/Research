@@ -1,0 +1,7 @@
+<app-back *ngIf="idProduct" urlBack="/detail-product/{{idProduct}}"></app-back>
+<app-back *ngIf="!idProduct" urlBack="/"></app-back>
+<app-top-details-bar title="Caracteristic {{idCaracteristique}}" urlBack="/detail-product/{{idProduct}}"></app-top-details-bar>
+<main class="details">
+    <app-main-specification title="Caracteristic {{idCaracteristique}}" idCaracteristique="{{idCaracteristique}}"></app-main-specification>
+</main>
+<app-errors></app-errors>
